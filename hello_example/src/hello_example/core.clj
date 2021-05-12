@@ -3,7 +3,6 @@
 
 ;; Hello example
 ;; string...
-
 (defn say-hello [] (println "Hello you!"))
 
 (defn say-welcome [whom]
@@ -26,6 +25,12 @@
   (average a b)
   )
 
+(defn main-hello []
+  (say-hello)
+  (say-welcome "Anthony")
+  (display-average 4 2)
+  (chatty-average 4 2)
+  )
 
 ;; try vector
 
@@ -47,16 +52,19 @@
   (println "Lenght of" message "vector is...." (count v))
   )
 
-;; main
-(defn -main
-  [& args]
-  (say-hello)
-  (say-welcome "Anthony")
-  (display-average 4 2)
-  (chatty-average 4 2)
+
+(defn main-vector []
   (create-simple-vector)
   (println (create-more-complex-vector))
   (println (create-a-vector))
   (print-count "complex" (create-more-complex-vector))
   (print-count "simple" (create-a-vector))
+  (println "create an empty vector" (vector))
+  )
+
+;; main
+(defn -main
+  [& args]
+  (main-hello)
+  (main-vector)
   )
