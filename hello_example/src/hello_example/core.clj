@@ -35,8 +35,8 @@
 ;; try vector
 
 (defn create-simple-vector []
-  (println (vector 1 2 3))
-  )
+  (vector 1 2 3))
+
 
 (defn create-more-complex-vector []
   (vector "first"
@@ -54,12 +54,14 @@
 
 
 (defn main-vector []
-  (create-simple-vector)
+  (println (create-simple-vector))
   (println (create-more-complex-vector))
   (println (create-a-vector))
   (print-count "complex" (create-more-complex-vector))
   (print-count "simple" (create-a-vector))
   (println "create an empty vector" (vector))
+  (println "The first element of vector is...." (first (create-simple-vector)))
+  (println "The rest of vector is...." (rest (create-simple-vector)))
   )
 
 ;; main
