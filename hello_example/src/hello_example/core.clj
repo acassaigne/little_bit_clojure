@@ -49,7 +49,7 @@
   (vector "a" "b" "c"))
 
 (defn print-count [message v]
-  (println "Lenght of" message "vector is...." (count v))
+  (println "Length of" message "vector is...." (count v))
   )
 
 
@@ -67,6 +67,7 @@
 ;; main
 (defn -main
   [& args]
+  (println args)
   (main-hello)
   (main-vector)
   )
