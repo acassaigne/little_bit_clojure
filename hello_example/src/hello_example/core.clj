@@ -86,10 +86,27 @@
 ;; (rest ["a" "b" "c"]) retourne une sequence et non pas un vector
 ;; sequence = sort of generic collection
 
+;; List
+(def simple-list '("zero" "one" "two" "three"))
+
+(defn main-list []
+  (println "The first list" '(1 2 3))
+  (println "A more complex list" '(1 "a text follow by a boolean value" true " and a float number" 3.1416))
+  (println "Count for simple list" (count simple-list))
+  (println "First of simple list" (first simple-list))
+  (println "Rest of simple list" (rest simple-list))
+  (println "Nth 2 of simple list" (nth simple-list 2))
+  (println "Conj on simple list" (conj simple-list "minus_one"))
+  )
+
+
+
 ;; main
 (defn -main
   [& args]
   (println args)
   (main-hello)
   (main-vector)
+  (main-list)
+
   )
