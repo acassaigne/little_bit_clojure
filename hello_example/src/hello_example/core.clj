@@ -99,6 +99,25 @@
   (println "Conj on simple list" (conj simple-list "minus_one"))
   )
 
+;; hash map
+
+(def FirstHashMap {"LastName" "Anthony" "Name" "Cassaigne" "Sport" "Footing"})
+
+(defn first-hash-map []
+  (println FirstHashMap))
+
+
+(defn how-to-get-value []
+  (println (get FirstHashMap "LastName")))
+
+(defn how-to-get-value-2 []
+  (println (FirstHashMap "LastName")))
+
+
+(defn main-hash-map []
+  (first-hash-map)
+  (how-to-get-value)
+  (how-to-get-value-2))
 
 
 ;; main
@@ -108,5 +127,5 @@
   (main-hello)
   (main-vector)
   (main-list)
-
+  (main-hash-map)
   )
