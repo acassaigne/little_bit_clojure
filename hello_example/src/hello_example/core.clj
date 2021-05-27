@@ -102,22 +102,31 @@
 ;; hash map
 
 (def FirstHashMap {"LastName" "Anthony" "Name" "Cassaigne" "Sport" "Footing"})
+(def KeyWordHashMap {:lastname "Anthony" :name "Cassaigne" :sport "footing"})
 
 (defn first-hash-map []
   (println FirstHashMap))
 
 
-(defn how-to-get-value []
+(defn how-to-get-value-v1 []
   (println (get FirstHashMap "LastName")))
 
-(defn how-to-get-value-2 []
+(defn how-to-get-value-v2 []
   (println (FirstHashMap "LastName")))
+
+(defn hash-map-with-keyword-v1 []
+  (println "Lastname from v1:" (KeyWordHashMap :lastname)))
+
+(defn hash-map-with-keyword-v2 []
+  (println "Lastname from v2:" (:lastname KeyWordHashMap)))
 
 
 (defn main-hash-map []
   (first-hash-map)
-  (how-to-get-value)
-  (how-to-get-value-2))
+  (how-to-get-value-v1)
+  (how-to-get-value-v2)
+  (hash-map-with-keyword-v1)
+  (hash-map-with-keyword-v2))
 
 
 ;; main
