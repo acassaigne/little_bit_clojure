@@ -74,7 +74,7 @@
 (defn example-growing-vector []
   (println "Conjunction for one vector (add element to the end..." (conj ["a" "b"] "c"))
   ;; cons return a sequence
-  (println "Construction for one vector (add element at the first position..." (cons "a"  [ "b" "c"]))
+  (println "Construction for one vector (add element at the first position..." (cons "a" ["b" "c"]))
   )
 
 (defn main-vector []
@@ -120,13 +120,26 @@
 (defn hash-map-with-keyword-v2 []
   (println "Lastname from v2:" (:lastname KeyWordHashMap)))
 
+(defn create-new-hash-map []
+  (println "New map" (assoc KeyWordHashMap :hobby "reading"))
+  (println "New map 2" (assoc KeyWordHashMap :pet "cats & dogs" :hobby "reading")))
+
+(defn remove-some-key-from-hash-map []
+  (println "New map less key" (dissoc KeyWordHashMap :sport)))
+
+(defn remove-all-keys-from-map []
+  (println "Empty after removing all keys" (dissoc KeyWordHashMap :sport :lastname :name)))
+
 
 (defn main-hash-map []
   (first-hash-map)
   (how-to-get-value-v1)
   (how-to-get-value-v2)
   (hash-map-with-keyword-v1)
-  (hash-map-with-keyword-v2))
+  (hash-map-with-keyword-v2)
+  (create-new-hash-map)
+  (remove-some-key-from-hash-map)
+  (remove-all-keys-from-map))
 
 
 ;; main
