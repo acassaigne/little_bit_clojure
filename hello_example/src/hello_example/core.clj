@@ -130,6 +130,12 @@
 (defn remove-all-keys-from-map []
   (println "Empty after removing all keys" (dissoc KeyWordHashMap :sport :lastname :name)))
 
+(defn get-all-keys-from-map []
+  (println "All keys from map......:" (keys KeyWordHashMap)))
+
+(defn get-all-values-from-map []
+  (println "All values from map....:" (vals KeyWordHashMap)))
+
 
 (defn main-hash-map []
   (first-hash-map)
@@ -139,7 +145,9 @@
   (hash-map-with-keyword-v2)
   (create-new-hash-map)
   (remove-some-key-from-hash-map)
-  (remove-all-keys-from-map))
+  (remove-all-keys-from-map)
+  (get-all-keys-from-map)
+  (get-all-values-from-map))
 
 
 ;; main
