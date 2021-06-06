@@ -154,34 +154,37 @@
 ;; sets
 ;; in a set all values are unique value
 
-(def myColorsSet #{:red :blue :yellow})
+(def my-colors-set #{:red :blue :yellow})
 
 (defn set-contain-a-value []
-  (if (contains? myColorsSet :blue)
-    (println "Blue is in this set" myColorsSet)
+  (if (contains? my-colors-set :blue)
+    (println "Blue is in this set" my-colors-set)
     (println "Blue is not present in this set!"))
   )
 
 (defn question-set-response-true []
-  (println "Yellow is it in the color set?" (contains? myColorsSet :yellow)))
+  (println "Yellow is it in the color set?" (contains? my-colors-set :yellow)))
 
 (defn question-set-response-false []
-  (println "Orange is it in the color set?" (contains? myColorsSet :orange)))
+  (println "Orange is it in the color set?" (contains? my-colors-set :orange)))
 
 (defn return-blue-value-from-color-set []
-  (println "I'm lookfing for :blue =>" (myColorsSet :blue)))
+  (println "I'm lookfing for :blue =>" (my-colors-set :blue)))
 
 (defn return-blue-value-from-color-set-2 []
-  (println "I'm lookfing for (v2) :blue =>" (:blue myColorsSet)))
+  (println "I'm lookfing for (v2) :blue =>" (:blue my-colors-set)))
 
 (defn return-nil-value-from-color-set []
-  (println "I'm lookfing for :orange =>" ( myColorsSet :orange)))
+  (println "I'm lookfing for :orange =>" ( my-colors-set :orange)))
 
 (defn return-nil-value-from-color-set-2 []
-  (println "I'm lookfing for (v2) :orange =>" (:orange myColorsSet)))
+  (println "I'm lookfing for (v2) :orange =>" (:orange my-colors-set)))
 
 (defn add-orange-to-new-colors-set []
-  (println "More colors to set" (conj myColorsSet :orange)))
+  (println "More colors to set" (conj my-colors-set :orange)))
+
+(defn remove-red-from-color-set []
+  (println "Fewer colors set" (disj my-colors-set :red)))
 
 (defn main-set []
   (set-contain-a-value)
@@ -192,6 +195,7 @@
   (return-nil-value-from-color-set)
   (return-nil-value-from-color-set-2)
   (add-orange-to-new-colors-set)
+  (remove-red-from-color-set)
   )
 
 
