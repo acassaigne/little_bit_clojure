@@ -168,11 +168,28 @@
 (defn question-set-response-false []
   (println "Orange is it in the color set?" (contains? myColorsSet :orange)))
 
+(defn return-blue-value-from-color-set []
+  (println "I'm lookfing for :blue =>" (myColorsSet :blue)))
+
+(defn return-blue-value-from-color-set-2 []
+  (println "I'm lookfing for (v2) :blue =>" (:blue myColorsSet)))
+
+(defn return-nil-value-from-color-set []
+  (println "I'm lookfing for :orange =>" ( myColorsSet :orange)))
+
+(defn return-nil-value-from-color-set-2 []
+  (println "I'm lookfing for (v2) :orange =>" (:orange myColorsSet)))
+
 
 (defn main-set []
   (set-contain-a-value)
   (question-set-response-true)
-  (question-set-response-false))
+  (question-set-response-false)
+  (return-blue-value-from-color-set)
+  (return-blue-value-from-color-set-2)
+  (return-nil-value-from-color-set)
+  (return-nil-value-from-color-set-2)
+  )
 
 
 
