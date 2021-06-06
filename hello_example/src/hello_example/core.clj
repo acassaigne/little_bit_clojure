@@ -180,6 +180,8 @@
 (defn return-nil-value-from-color-set-2 []
   (println "I'm lookfing for (v2) :orange =>" (:orange myColorsSet)))
 
+(defn add-orange-to-new-colors-set []
+  (println "More colors to set" (conj myColorsSet :orange)))
 
 (defn main-set []
   (set-contain-a-value)
@@ -189,6 +191,7 @@
   (return-blue-value-from-color-set-2)
   (return-nil-value-from-color-set)
   (return-nil-value-from-color-set-2)
+  (add-orange-to-new-colors-set)
   )
 
 
