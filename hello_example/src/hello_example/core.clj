@@ -136,6 +136,7 @@
 (defn get-all-values-from-map []
   (println "All values from map....:" (vals KeyWordHashMap)))
 
+;; main map
 
 (defn main-hash-map []
   (first-hash-map)
@@ -150,7 +151,32 @@
   (get-all-values-from-map))
 
 
-;; main
+;; sets
+;; in a set all values are unique value
+
+(def myColorsSet #{:red :blue :yellow})
+
+(defn set-contain-a-value []
+  (if (contains? myColorsSet :blue)
+    (println "Blue is in this set" myColorsSet)
+    (println "Blue is not present in this set!"))
+  )
+
+(defn question-set-response-true []
+  (println "Yellow is it in the color set?" (contains? myColorsSet :yellow)))
+
+(defn question-set-response-false []
+  (println "Orange is it in the color set?" (contains? myColorsSet :orange)))
+
+
+(defn main-set []
+  (set-contain-a-value)
+  (question-set-response-true)
+  (question-set-response-false))
+
+
+
+;; MAIN
 (defn -main
   [& args]
   (println args)
@@ -158,4 +184,5 @@
   (main-vector)
   (main-list)
   (main-hash-map)
+  (main-set)
   )
