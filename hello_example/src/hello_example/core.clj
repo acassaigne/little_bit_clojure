@@ -1,6 +1,17 @@
 (ns hello-example.core
   (:gen-class))
 
+;; header
+
+(defn header [message]
+  (println "======================")
+  (println "=                    =")
+  (println "=" message "=")
+  (println "=                    =")
+  (println "======================")
+  )
+
+
 ;; Hello example
 ;; string...
 (defn say-hello [] (println "Hello you!"))
@@ -78,6 +89,7 @@
   )
 
 (defn main-vector []
+  (header "vector")
   (examples-create-vectors)
   (example-manipulate-vector)
   (example-growing-vector)
@@ -90,6 +102,7 @@
 (def simple-list '("zero" "one" "two" "three"))
 
 (defn main-list []
+  (header "list")
   (println "The first list" '(1 2 3))
   (println "A more complex list" '(1 "a text follow by a boolean value" true " and a float number" 3.1416))
   (println "Count for simple list" (count simple-list))
@@ -145,6 +158,7 @@
 ;; main map
 
 (defn main-hash-map []
+  (header "map")
   (first-hash-map)
   (how-to-get-value-v1)
   (how-to-get-value-v2)
@@ -195,6 +209,7 @@
   (println "Fewer colors set" (disj my-colors-set :red)))
 
 (defn main-set []
+  (header "set")
   (set-contain-a-value)
   (question-set-response-true)
   (question-set-response-false)
