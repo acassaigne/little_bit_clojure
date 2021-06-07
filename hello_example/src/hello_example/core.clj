@@ -136,6 +136,12 @@
 (defn get-all-values-from-map []
   (println "All values from map....:" (vals KeyWordHashMap)))
 
+(defn count-from-map []
+  (println "Count element in map...:" (count KeyWordHashMap)))
+
+(defn first-element-of-map []
+  (println "First element of map without warranty (map is not ordered)....:" (first KeyWordHashMap)))
+
 ;; main map
 
 (defn main-hash-map []
@@ -148,7 +154,9 @@
   (remove-some-key-from-hash-map)
   (remove-all-keys-from-map)
   (get-all-keys-from-map)
-  (get-all-values-from-map))
+  (get-all-values-from-map)
+  (count-from-map)
+  (first-element-of-map))
 
 
 ;; sets
