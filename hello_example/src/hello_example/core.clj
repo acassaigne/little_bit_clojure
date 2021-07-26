@@ -221,7 +221,52 @@
   (remove-red-from-color-set)
   )
 
+;; if and conditions
 
+(defn could-print-hello [has-to-say-hello]
+  (if has-to-say-hello
+    (println "Hello Anthony")))
+
+(defn what-else [say-hello]
+  (if say-hello
+    (println "Hello Anthony!")
+    (println "What's up?")))
+
+(defn if-is-returning-a-value [say-hello]
+  (if say-hello
+    "Hello Anthony!"
+    "What's up?"))
+
+(defn print-a-conditional-message []
+  (println (if-is-returning-a-value true))
+  (println (if-is-returning-a-value false)))
+
+(defn simple-if-part-1 []
+  (header "if & conditionnals")
+  (could-print-hello true)
+  (could-print-hello false)
+  (what-else false)
+  (print-a-conditional-message)
+  )
+
+(defn are-equal []
+  (= 1 1))
+
+(defn all-one-are-equals []
+  (= 1 1 1 1))
+
+
+(defn if-expression-part-2 []
+  (println "1 = 1 is" (are-equal))
+  (println "1 = 1 = 1 = 1 is" (all-one-are-equals))
+  )
+
+
+
+(defn main-if-conditionnals []
+  (simple-if-part-1)
+  (if-expression-part-2)
+  )
 
 ;; MAIN
 (defn -main
@@ -232,4 +277,5 @@
   (main-list)
   (main-hash-map)
   (main-set)
+  (main-if-conditionnals)
   )
